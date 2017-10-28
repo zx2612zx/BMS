@@ -10,7 +10,6 @@
     <name>bms-pom</name>
     <url>http://maven.apache.org</url>
 
-
     <modules>
         <module>../bms-web</module>
         <module>../bms-intf</module>
@@ -27,28 +26,28 @@
 
     <profiles>
 
-        <profile>
-            <id>dev</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-            <properties>
-                <env>dev</env>
-            </properties>
-        </profile>
+    <profile>
+        <id>dev</id>
+        <activation>
+            <activeByDefault>true</activeByDefault>
+        </activation>
+        <properties>
+            <env>dev</env>
+        </properties>
+    </profile>
 
-        <profile>
-            <id>prod</id>
-            <properties>
-                <env>prod</env>
-            </properties>
-        </profile>
-    </profiles>
+    <profile>
+        <id>prod</id>
+        <properties>
+            <env>prod</env>
+        </properties>
+    </profile>
+</profiles>
 
     <build>
 
         <filters> <!-- 指定使用的 filter -->
-            <filter>${basedir}/src/main/resources/vars/${env}.vars.properties</filter>
+            <filter>../${project.parent.artifactId}/vars/${env}.vars.properties</filter>
         </filters>
 
         <finalName>bms</finalName>
@@ -62,27 +61,30 @@
             </resource>
         </resources>
 
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-war-plugin</artifactId>
-                <version>2.6</version>
-                <configuration>
-                    <webResources>
-                        <resource>
-                            <filtering>true</filtering>
-                            <directory>${project.basedir}/src/main/webapp</directory>
-                            <includes>
-                                <include>**/*.js</include>
-                                <include>**/*.html</include>
-                                <include>**/*.ftl</include>
-                                <include>**/*.css</include>
-                            </includes>
-                        </resource>
-                    </webResources>
-                </configuration>
-            </plugin>
-        </plugins>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-war-plugin</artifactId>
+                    <version>2.6</version>
+                    <configuration>
+                        <webResources>
+                            <resource>
+                                <filtering>true</filtering>
+                                <directory>${project.basedir}/src/main/webapp</directory>
+                                <includes>
+                                    <include>**/*.js</include>
+                                    <include>**/*.html</include>
+                                    <include>**/*.ftl</include>
+                                    <include>**/*.css</include>
+                                </includes>
+                            </resource>
+                        </webResources>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+
 
     </build>
 
