@@ -8,9 +8,13 @@ http://www.springframework.org/schema/mvc http://www.springframework.org/schema/
     <!--开启包扫描-->
     <context:component-scan base-package="xyz.zhangxing" />
 
+    <mvc:default-servlet-handler/>
 
-    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+    <bean abstract="true" name="viewResolver" class="org.springframework.web.servlet.view.UrlBasedViewResolver">
         <property name="prefix" value="/WEB-INF"></property>
+    </bean>
+
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" parent="viewResolver">
         <property name="viewNames">
                <array>
                    <value>*.jsp</value>
@@ -19,8 +23,7 @@ http://www.springframework.org/schema/mvc http://www.springframework.org/schema/
         <property name="order" value="2"/>
     </bean>
 
-    <bean class="xyz.zhangxing.spring.extend.viewresolver.GenericViewResolver">
-        <property name="prefix" value="/WEB-INF"></property>
+    <bean class="xyz.zhangxing.spring.extend.viewresolver.GenericViewResolver" parent="viewResolver">
         <property name="contentType" value="text/html"></property>
         <property name="viewNames">
             <array>
