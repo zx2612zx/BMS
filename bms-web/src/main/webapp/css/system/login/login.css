@@ -1,3 +1,7 @@
+.glyphicon{
+    line-height: 40px;
+}
+
 .container-fluid{
     padding-right: 0px;
     padding-left: 0px;
@@ -19,14 +23,80 @@
 }
 
 .ocs-content-bg{
+    height:600px;
     background-color: rgb(0, 192, 158);
 }
 
+.ocs-postion-relative{
+    position:relative;
+}
 .ocs-login-container{
-    width:200px;
-    height:200px;
+    width:350px;
+    height:360px;
     position: absolute;
-    right:0px;
-    top:-50%;
+    right:20px;
+    top:50%;
+    margin-top:-180px;
+    background: #fff;
+}
 
+.ocs-lg{
+    width:298px;
+    margin:auto;
+}
+.ocs-login-title{
+    font-size: 18px;
+    padding: 20px 0px 10px 20px;
+    font-weight: bold;
+}
+
+.ocs-login-div{
+    margin:20px auto;
+    position:relative;
+}
+.ocs-login-logo{
+    position:absolute;
+    background: #ddd;
+    width:40px;
+    height:42px;
+    line-height: 40px !important;
+    text-align: center;
+    vertical-align: middle;
+}
+.ocs-login-input{
+    vertical-align: middle;
+    width:298px;
+    height: 42px;
+    border:1px solid #ddd;
+    padding-left:50px;
+}
+.ocs-login-user{
+
+}
+
+.ocs-login-logo-font{
+    font-size: 22px;
+}
+
+.ocs-lg-submit{
+    display: inline-block;
+    background-color: #ff0036;
+    width:300px;
+    height:42px;
+    text-align: center;
+    font-size:20px;
+    color:white;
+    line-height: 42px;
+}
+.ocs-lg-operate{
+    margin-top:30px;
+}
+.ocs-lg-operate>li{
+    float:right;
+    margin-right:10px;
+}
+
+.ocs-lg-submit:hover{
+    color:white;
+    opacity:0.8;
 }

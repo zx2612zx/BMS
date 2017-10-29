@@ -1,0 +1,14 @@
+.ocs-a-default{
+    text-decoration: none;
+}
+
+.ocs-a-default:hover{
+    text-decoration: none;
+}
+
+.ocs-li-default{
+    list-style-type: none;
+}
+.ocs-li-default:hover{
+   color:#ff0036;
+}
