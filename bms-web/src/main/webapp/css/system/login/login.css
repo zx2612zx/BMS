@@ -1,0 +1,32 @@
+.container-fluid{
+    padding-right: 0px;
+    padding-left: 0px;
+}
+.ocs-login-padding{
+    width:1190px;
+    margin:auto;
+}
+.ocs-login-header{
+    padding-top:30px;
+    padding-bottom: 30px;
+}
+.ocs-container-bg{
+    opacity: 0.8;
+}
+.ocs-logo{
+    height:32px;
+    margin-left:20px;
+}
+
+.ocs-content-bg{
+    background-color: rgb(0, 192, 158);
+}
+
+.ocs-login-container{
+    width:200px;
+    height:200px;
+    position: absolute;
+    right:0px;
+    top:-50%;
+
+}
