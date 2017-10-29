@@ -5,7 +5,10 @@ import org.springframework.web.servlet.view.AbstractUrlBasedView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.BufferedReader;
+import java.io.FileInputStream;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.Map;
 
 /**
@@ -22,7 +25,11 @@ public class GenericView extends AbstractUrlBasedView {
 
     protected void renderMergedOutputModel(Map<String, Object> model, HttpServletRequest request, HttpServletResponse response) throws Exception {
         InputStream  in=getApplicationContext().getResource(getViewPath(request)).getInputStream();
-        IOUtils.copy(in,response.getWriter());
+
+        //读文件的时候要注意编码方式，默认以request中的编码
+       BufferedReader reader= new BufferedReader(new InputStreamReader(in,request.getCharacterEncoding()));
+
+        IOUtils.copy(reader,response.getWriter());
     }
 
     public String getViewPath(HttpServletRequest request){
