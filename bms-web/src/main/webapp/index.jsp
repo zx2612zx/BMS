@@ -1,5 +1,7 @@
 <html>
 <body>
-<h2>${baseUrl}</h2>
+<script>
+    window.location.href="${baseUrl}/system/login/loginUI.htm";
+</script>
 </body>
 </html>
