@@ -55,10 +55,12 @@
     position:relative;
 }
 .ocs-login-logo{
+    top: 1px;
+    left:1px;
     position:absolute;
     background: #ddd;
     width:40px;
-    height:42px;
+    height:40px;
     line-height: 40px !important;
     text-align: center;
     vertical-align: middle;
