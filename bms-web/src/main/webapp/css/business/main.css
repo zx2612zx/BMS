@@ -7,11 +7,13 @@
 }
 
 .main-left {
+    float:left;
     color: white;
     background-color: #874fb3;
     box-shadow: 1px 0 2px rgba(20, 20, 20, 0.4);
-    width: 160px;
+    width: 180px;
 }
+
 
 .main-left a{
     color:white;
@@ -41,3 +43,30 @@
     color:#ffaa00;
     text-decoration: underline;
 }
+
+.main-middle{
+    padding-left:180px;
+}
+
+.mm-banner{
+    width:760px;
+    height:260px;
+}
+
+.mm-banner img{
+    display: inline-block;
+    width:860px;
+}
+
+.carousel-indicators{
+    right:10px !important;
+    bottom:0px !important;
+    width: auto !important;
+    left:auto !important;
+}
+
+.main-right{
+
+}
+
+
