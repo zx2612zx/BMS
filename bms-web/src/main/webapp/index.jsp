@@ -1,7 +1,7 @@
 <html>
 <body>
 <script>
-    window.location.href="${baseUrl}/system/login/loginUI.htm";
+    window.location.href="${baseUrl}/business/homePage/main.htm";
 </script>
 </body>
 </html>

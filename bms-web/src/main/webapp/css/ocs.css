@@ -1,9 +1,11 @@
 .ocs-a-default{
+    color: #666;
     text-decoration: none;
 }
 
 .ocs-a-default:hover{
     text-decoration: none;
+    color:#ff0036;
 }
 
 .ocs-li-default{
