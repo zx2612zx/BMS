@@ -1,0 +1,26 @@
+.ocs-m-content{
+    border-top:2px solid black;
+}
+.index-main {
+    margin: 0px auto;
+    width: 1190px;
+}
+
+.main-left {
+    color: white;
+    background-color: #508b87;
+    box-shadow: 1px 0 2px rgba(20, 20, 20, 0.4);
+    width: 200px;
+}
+
+.main-left a{
+    color:white;
+}
+
+.main-left dd,.main-left dt{
+    border-bottom: 1px solid #ccc;
+}
+
+.main-left dd{
+    padding:10px 0px;
+}
