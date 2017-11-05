@@ -8,19 +8,36 @@
 
 .main-left {
     color: white;
-    background-color: #508b87;
+    background-color: #874fb3;
     box-shadow: 1px 0 2px rgba(20, 20, 20, 0.4);
-    width: 200px;
+    width: 160px;
 }
 
 .main-left a{
     color:white;
 }
 
-.main-left dd,.main-left dt{
-    border-bottom: 1px solid #ccc;
+.main-left dd,.main-left dt {
+    width:120px;
+    margin:0 auto;
+    padding: 8px 0px;
+    border-bottom: 1px solid #cccccc30;
+}
+.main-left dt{
+    font-size:16px;
+ }
+.main-left dd{
+    overflow: hidden;
+    font-size:12px;
 }
 
-.main-left dd{
-    padding:10px 0px;
+.main-left dd a{
+    float:left;
+    width:60px;
+    display: inline-block;
+}
+
+.main-left dd a:hover{
+    color:#ffaa00;
+    text-decoration: underline;
 }
