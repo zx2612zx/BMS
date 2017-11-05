@@ -15,18 +15,20 @@
     <script src="${baseUrl}/plugins/jquery/jquery.js"></script>
 </head>
 <body>
-<div class="container-fluid ocs-container-bg">
+<div class=" ocs-container-bg">
     <!--导航栏-->
     <div class="ocs-m-nav">
-        <div class="nav-toolbar-left">
-            <a class="ocs-a-default"><span>网站导航</span></a>
-            <a class="ocs-a-default">客户服务</span</a>
-        </div>
-        <div class="nav-toolbar-right">
-            <a class="ocs-a-default" href="${baseUrl}/system/login/loginUI.htm"><span>用户登录</span></a>
-            <a class="ocs-a-default" href=""><span>用户注册</span></a>
-            <a class="ocs-a-default"><span>我的订单</span></a>
-            <a class="ocs-a-default"><span>我的购物车</span></a>
+        <div>
+            <div class="nav-toolbar-left">
+                <a class="ocs-a-default"><span>网站导航</span></a>
+                <a class="ocs-a-default">客户服务</span</a>
+            </div><!--搜索区域-->
+            <div class="nav-toolbar-right">
+                <a class="ocs-a-default" href="${baseUrl}/system/login/loginUI.htm"><span>用户登录</span></a>
+                <a class="ocs-a-default" href=""><span>用户注册</span></a>
+                <a class="ocs-a-default"><span>我的订单</span></a>
+                <a class="ocs-a-default"><span>我的购物车</span></a>
+            </div>
         </div>
     </div>
 
@@ -34,19 +36,29 @@
     <div class="ocs-m-search">
         <div class="ng-logo-box">
             <a class="ng-logo ocs-a-default">
-                <img src="//res.suning.cn/public/v3/images/logo/snlogo.png?v=2015042703" height="100" width="190" alt="苏宁易购">
+                <img src="//res.suning.cn/public/v3/images/logo/snlogo.png?v=2015042703" height="100" width="190"
+                     alt="苏宁易购">
             </a>
             <span class="ng-logo-text">书城</span>
         </div>
 
         <div class="ng-search">
-                <div>
-                    <label class="ng-sea-icon">
-                        <i class="glyphicon glyphicon-search"></i>
-                    </label>
-                    <input class="ng-sea-input"  placeholder="请输入查询的关键词"/>
-                    <a class="ocs-lg-submit ocs-a-default">搜索</a>
-                </div>
+            <div>
+                <label class="ng-sea-icon" for="search">
+                    <i class="glyphicon glyphicon-search"></i>
+                </label>
+                <input id="search" class="ng-sea-input" placeholder="请输入查询的关键词" autocomplete="off"/>
+                <a class=" ng-sea-btn ">搜索</a>
+            </div>
+
+            <!--热搜词-->
+            <div class="ng-hotkey">
+                <a class=" ocs-li-inline">我的天</a>
+                <a class=" ocs-li-inline">我的第</a>
+                <a class=" ocs-li-inline">我的弟弟第啊</a>
+                <a class=" ocs-li-inline">我的弟弟第啊</a>
+            </div>
+
         </div>
 
     </div>
