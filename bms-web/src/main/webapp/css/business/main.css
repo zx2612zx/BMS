@@ -15,6 +15,7 @@ ul, ol{
     background-color: #874fb3;
     box-shadow: 1px 0 2px rgba(20, 20, 20, 0.4);
     width: 180px;
+    height:690px;
 }
 
 
@@ -76,18 +77,20 @@ ul, ol{
 .carousel-re{
     width:760px;
     height:360px;
+    padding: 5px 0 0 0;
 }
 
 .recomm-ul{
     padding:0px;
     overflow: hidden;
     height:360px;
+    margin-left: 68.5px;
 }
 
 .recomm-ul>li{
-    width:380px;
-    float:left;
-    padding:20px;
+    width: 325px;
+    float: left;
+    padding: 20px 10px;
 }
 
 .re-text{
@@ -110,6 +113,7 @@ ul, ol{
 }
 
 .re-left,.re-right{
+    width: 80px !important;
 }
 
 
@@ -121,4 +125,15 @@ ul, ol{
 .re-right>span{
     right:10px !important;
     margin-top: -19px !important;
+}
+
+.re-title{
+    font-size: 16px;
+    font-weight: bolder;
+    padding: 0 5px;
+    line-height: 40px;
+    height: 40px;
+    margin: 0;
+    background: #eae5e5;
+    box-shadow: 5px 5px 20px #ad7e7e69;
 }
