@@ -7,14 +7,24 @@
     color: #666;
     font-size:12px;
     line-height: 40px;
-    overflow: hidden;
 }
 
 .ocs-m-nav>div{
+    background:#f5f5f5 ;
     position:relative;
     margin: 0px auto;
     width: 1190px;
     height: 40px;
+}
+
+
+.ocs-nav-a{
+    color:#666;
+}
+
+.ocs-nav-a:hover{
+    color:#ff0036;
+    font-size:14px;
 }
 
 .nav-toolbar-left{
