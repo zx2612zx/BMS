@@ -7,7 +7,6 @@
     padding-left: 0px;
 }
 .ocs-login-padding{
-    width:1190px;
     margin:auto;
 }
 .ocs-login-header{
@@ -34,7 +33,7 @@
     width:350px;
     height:360px;
     position: absolute;
-    right:20px;
+    right:100px;
     top:50%;
     margin-top:-180px;
     background: #fff;
@@ -82,7 +81,7 @@
 
 .ocs-lg-submit{
     display: inline-block;
-    background-color: #ff0036;
+    background-color: #4ba9e1;
     width:300px;
     height:42px;
     text-align: center;
