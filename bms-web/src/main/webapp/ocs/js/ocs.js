@@ -35,6 +35,6 @@ $.fn.footer = function () {
      </div>
      </div>
      */ }.toString();
-    console.log($.heredoc(footerHtml))
+
     $(this).append($.heredoc(footerHtml));
 }

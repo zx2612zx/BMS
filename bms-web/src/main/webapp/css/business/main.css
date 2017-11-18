@@ -3,6 +3,7 @@ ul, ol{
 }
 .ocs-m-content{
     border-top:2px solid black;
+    overflow: hidden;
 }
 .index-main {
     margin: 0px auto;
