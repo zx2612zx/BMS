@@ -1,0 +1,37 @@
+.ocs-ft-body {
+    width: 100%;
+    min-width: 1190px;
+    margin-top:30px;
+    font-family: monospace;
+}
+.ocs-ft-body a{
+  text-decoration: none;
+}
+.ocs-ft-body a:hover{
+    text-decoration: underline;
+    color:red;
+}
+
+.ocs-ft-body>div{
+    width: 1190px;
+    margin: 0 auto;
+}
+*.ocs-ft-content {
+    width: 100%;
+}
+
+.ocs-ft-lk {
+    font-size: 13px;
+    color: #000;
+    margin-right: 12px;
+}
+
+.ocs-ft-text a {
+    font-size: 11px;
+    color:#8c6a6a;
+    margin-right: 30px;
+}
+
+.ocs-ft-b{
+    margin-top:20px;
+}

@@ -25,8 +25,6 @@ public class GenericView extends AbstractUrlBasedView {
 
     protected void renderMergedOutputModel(Map<String, Object> model, HttpServletRequest request, HttpServletResponse response) throws Exception {
         InputStream  in=getApplicationContext().getResource(getViewPath(request)).getInputStream();
-
-
         //读文件的时候要注意编码方式，默认以request中的编码
         IOUtils.copy(in,response.getWriter(),request.getCharacterEncoding());
     }
