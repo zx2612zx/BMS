@@ -10,13 +10,14 @@
     <link href="${baseUrl}/plugins/normalize.css" rel="stylesheet">
 
     <link href="${baseUrl}/css/system/login/login.css" rel="stylesheet">
-    <link href="${baseUrl}/css/ocs.css" rel="stylesheet">
+    <link href="${baseUrl}/ocs/css/ocs.css" rel="stylesheet">
     <script src="${baseUrl}/plugins/jquery/jquery.js"></script>
+    <script src="${baseUrl}/ocs/js/ocs.js"></script>
 </head>
 <body>
 <div class="container-fluid ocs-container-bg">
     <div class="ocs-login-header ">
-     <!--   <img class="ocs-logo" src="//img.alicdn.com/tfs/TB1_Gn8RXXXXXXqaFXXXXXXXXXX-380-54.png">-->
+        <!--   <img class="ocs-logo" src="//img.alicdn.com/tfs/TB1_Gn8RXXXXXXqaFXXXXXXXXXX-380-54.png">-->
     </div>
     <div class=" ocs-content-bg ">
         <div class=" ocs-login-padding ocs-postion-relative">
@@ -41,7 +42,7 @@
                     <div>
                         <a class="ocs-lg-submit ocs-a-default">登录</a>
                     </div>
-                    <div >
+                    <div>
                         <ul class="ocs-lg-operate">
                             <li class="ocs-li-default">忘记密码</li>
                             <li class="ocs-li-default">免费注册</li>
@@ -52,12 +53,11 @@
         </div>
     </div>
 
-    <div class="ft">
+    <div class="ft"></div>
 
-    </div>
 </div>
 <script>
-    $(".ft").load("${baseUrl}/common/footer.html");
+    $(".ft").footer();
 </script>
 </body>
 </html>
