@@ -3,12 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <title>用户注册</title>
+    <style type="text/css">
+        *.registStep{
+            float: left;
+            text-align: center;
+            padding-left: 20px;
+            display:inline;
+            color: green;
+        }
+        #registStep1{
+            color: red;
+        }
+    </style>
 </head>
 <body>
-    <div class="form-title" style="padding:100px;width:1000px;height: 0px"></div>
+    <div><img src="../../../images/registTitle.png"style="width: 100%;height: 5%"></div>
+    <div style="text-align: center;padding:0">
+        <ol style="list-style:none;text-align: center;padding-left: 400px">
+            <li id="registStep1" class="registStep"><span>设置用户姓名</span></li>
+            <li id="registStep2" class="registStep"><span>填写账号信息</span></li>
+            <li id="registStep3" class="registStep"><span>设置支付方式</span></li>
+            <li id="registStep4" class="registStep"><span>注册成功</span></li>
+        </ol>
+        <!--<div class="registStep"><a>设置用户姓名</a></div>
+        <div class="registStep"><a>填写账号信息</a></div>
+        <div class="registStep"><a>设置支付方式</a></div>
+        <div class="registStep"><a>注册成功</a></div>-->
+    </div>
+    <br>
     <hr>
-    <div class="form-group" style="padding:100px;width:1000px;height: 600px">
-        <br>
+    <div class="form-group" style="padding:100px;width:1000px;height: 600px;text-align: center;margin:0">
+
         <div class="form-item"style="color: green">
             <span>手机号：</span>
             <select>
@@ -20,12 +45,29 @@
         </div>
 
         <br>
-        <div class="form-item">
-            验证码：<input type="text">
+        <div class="form-item" style="color: green;margin:0">
+            <span style="padding-left: 40px">验证码：</span><input type="text">
             <img height="24px" width="150px" src="../../../picture/KDQU.png">
         </div>
+        <br>
+        <div style="color: #2aabd2;margin: 0;text-align: center;">
+            <input type="button" value="下一步">
+        </div>
+    </div>
+    <div id="registStep21" style="display: none">
+        <span>登录名</span><input >
+    </div>
+    <div id="registStep31" style="display: none">
 
     </div>
-    <iframe width=100% src="../ocs-ft/ocs-ft-all.html"></iframe>
+    <div id="registStep41" style="display: none">
+
+    </div>
+    <div class="ft"></div>
+    <script>
+        $(".ft").footer();
+
+    </script>
+
 </body>
 </html>
