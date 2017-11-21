@@ -14,12 +14,22 @@
         #registStep1{
             color: red;
         }
+		*.form-group{
+			padding:100px;
+			width:1000px;
+			height: 600px;
+			text-align: center;
+			margin:0;
+		}
+		ol{
+			list-style:none;
+		}
     </style>
 </head>
 <body>
     <div><img src="../../../images/registTitle.png"style="width: 100%;height: 5%"></div>
     <div style="text-align: center;padding:0">
-        <ol style="list-style:none;text-align: center;padding-left: 400px">
+        <ol style="text-align: center;padding-left: 400px">
             <li id="registStep1" class="registStep"><span>设置用户姓名</span></li>
             <li id="registStep2" class="registStep"><span>填写账号信息</span></li>
             <li id="registStep3" class="registStep"><span>设置支付方式</span></li>
@@ -32,42 +42,220 @@
     </div>
     <br>
     <hr>
-    <div class="form-group" style="padding:100px;width:1000px;height: 600px;text-align: center;margin:0">
-
+    <div id="page1"class="form-group" style="padding:100px;width:1000px;height: 600px;text-align: center;margin:0">
+	<ol>
+		<li>
         <div class="form-item"style="color: green">
             <span>手机号：</span>
-            <select>
+            <select id="phoneCode">
                 <option value="0"><span style="width: 150px; user-select: none;">中国大陆</span><span>+86</span></option>
                 <option value="1"><span>中国台湾</span><span>+886</span></option>
                 <option value="2"><span style="width: 150px; user-select: none;">中国香港</span><span>+852</span></option>
             </select>
-            <input type="text" placeholder="请输入手机号">
+            <input id="phoneNum" type="text" placeholder="请输入手机号">
         </div>
+		</li>
 
         <br>
+		<li>
         <div class="form-item" style="color: green;margin:0">
-            <span style="padding-left: 40px">验证码：</span><input type="text">
+            <span style="padding-left: 40px">验证码：</span><input id="verificationCode" type="text">
             <img height="24px" width="150px" src="../../../picture/KDQU.png">
         </div>
+		</li>
         <br>
+		<li>
         <div style="color: #2aabd2;margin: 0;text-align: center;">
-            <input type="button" value="下一步">
+            <input type="button" value="下一步" onclick="nextStep1()">
+        </div>
+		</li>
+	</ol>	
+    </div>
+    <div id="page2" class="form-group" style="display: none">
+	<ol style="text-align:left;padding-left: 400px;">
+		<li>
+        <div class="form-item"style="color: green">
+			<span>登录名:</span><input id="userName" readonly="readonly"><br>
+		</div>
+		</li>
+		<br>
+		<li>
+		<div class="form-item" style="color: green;margin:0">
+			<span>设置登录密码:</span> <input value="登录时验证，保护账号信息" readonly="readonly" style="border:0px; color:gray">
+		</div>
+		</li>	
+		<br>
+		<li>
+		<div class="form-item"style="color: green">
+			<span>登录密码:</span><input id="loginPassword" class="pass" type="password"><br>
+		</div>
+		</li>
+		<br>
+		<li>
+		<div class="form-item"style="color: green">
+			<span>确认密码:</span><input id="confirmPassword" class="pass" type="password"><br>
+		</div>
+		</li>
+		<br>
+		<li>
+		<div style="color: #2aabd2;margin: 0;">
+            <input type="button" value="下一步" onclick="nextStep2()"style="
+					padding-left: 60px;
+					border-left-width: 2px;
+					margin-left: 50px;
+					padding-right: 60px;">
+        </div>
+		</li>
+	</ol>
+    </div>
+    <div id="page3" class="form-group" style="display: none">
+		<div style="color:red;padding-right:250px;">预留付款方式：</div>
+		<ol>
+			<li><input id="zhifubao" class="paymentType" name="paymentType" type="checkbox"><span>支付宝: </span><input/></li>
+			<br>
+			<li><input id="weixin" class="paymentType" name="paymentType" type="checkbox"><span>微信号: </span><input/></li>
+			<br>
+			<li><input id="yinghangka" class="paymentType" name="paymentType" type="checkbox"><span>银行卡: </span><input/></li>
+			<br>
+			<li><input id="xinyongka" class="paymentType" name="paymentType" type="checkbox"><span>信用卡: </span><input/></li>
+		</ol>
+		<div>
+			<span style="padding-left: 180px;">收货地址：</span><input type="text" style="width:300px"/>
+		</div>
+		<br>
+        <div style="color: #2aabd2;margin: 0;text-align: center;">
+            <input type="button" value="下一步" onclick="nextStep3()">
         </div>
     </div>
-    <div id="registStep21" style="display: none">
-        <span>登录名</span><input >
-    </div>
-    <div id="registStep31" style="display: none">
-
-    </div>
-    <div id="registStep41" style="display: none">
-
+    <div id="page4" style="display: none">
+		<div>
+			<span>恭喜用户 </span><input id="user" type="text" readonly="readonly" style="border:0px;color:red;text-align:center"><span>您已经可以购买商品了，请开始您的购物之旅吧！</span>
+		</div>
+        <div style="color: #2aabd2;margin: 0;text-align: center;">
+            <input type="button" value="完成" onclick="submit()">
+        </div>
     </div>
     <div class="ft"></div>
     <script>
         $(".ft").footer();
 
     </script>
+	<script type="text/javascript">
+		// 手机号
+		var phoneNum = document.getElementById("phoneNum");
+		// 验证码
+		var verificationCode = document.getElementById("verificationCode");
+		// 用户名
+		var userName = document.getElementById("userName");
+		// 用户
+		var user = document.getElementById("user");
+		
+		//步骤一
+        function nextStep1() {
+			var pv = phoneNum.value
+			var vv = verificationCode.value;
+			if(checkPhone(pv)){
+				alert("请正确输入手机号！");
+				return;
+			}
+			if(undefined == vv || null == vv || "" == vv){
+				alert("请输入验证码！");
+				return;
+			}
+			userName.value = phoneNum.value;
+            var registStep1 = document.getElementById("registStep1");
+            var registStep2 = document.getElementById("registStep2");
+            registStep1.style.color="green";
+            registStep2.style.color="red";
+            var page1=document.getElementById("page1");
+            page1.style.display="none";
+            var page2=document.getElementById("page2");
+            page2.style.display=null;
+        }
 
+        function nextStep2() {
+			var loginPassword = document.getElementById("loginPassword").value;
+			var confirmPassword = document.getElementById("confirmPassword").value;
+			alert(loginPassword);
+			alert(confirmPassword);
+			if(checkPassword(loginPassword,confirmPassword)){
+				return;
+			}
+            var registStep2 = document.getElementById("registStep2");
+            var registStep3 = document.getElementById("registStep3");
+            registStep2.style.color="green";
+            registStep3.style.color="red";
+            var page2=document.getElementById("page2");
+            page2.style.display="none";
+            var page3=document.getElementById("page3");
+            page3.style.display=null;
+        }
+
+        function nextStep3() {
+			// 是否有选中的支付方式，默认无
+			var flag = false; 
+			var paymentList = document.getElementsByClassName("paymentType");
+			for(var i=0;i<paymentList.length;i++){
+				if(paymentList[i].checked){
+					// 设置了支付方式
+					flag = true;					
+				}
+			}
+			if(!flag){
+				alert("请至少选择一种支付方式！");
+				return;
+			}
+            var registStep3 = document.getElementById("registStep3");
+            var registStep4 = document.getElementById("registStep4");
+            registStep3.style.color="green";
+            registStep4.style.color="red";
+            var page3=document.getElementById("page3");
+            page3.style.display="none";
+            var page4=document.getElementById("page4");
+            page4.style.display=null;
+			
+			user.value = userName.value;			
+        }
+        /*function nextStep4() {
+            var registStep1 = document.getElementById("registStep4");
+            var registStep2 = document.getElementById("registStep2");
+            registStep1.style.color="green";
+            registStep2.style.color="red";
+            var page1=document.getElementById("page1");
+            page1.style.display="none";
+            var page2=document.getElementById("page2");
+            page2.style.display=null;
+        }*/
+		function checkPhone(phone){
+			// 13位手机号校验的正则表达式
+			var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/; 
+			if(undefined == phone || null == phone || "" == phone){
+				return true;
+			}else if(!myreg.test(phone)){
+				return true;
+			}else{
+				return false;
+			}			
+		}
+		
+		function checkPassword(lp,cp){		
+			if(undefined == lp || null == lp || "" == lp){
+				alert("请输入登陆密码！");
+				return true;
+			}else if(undefined == cp || null == cp || "" == cp){
+				alert("请输入确认密码！");
+				return true;
+			}else if(cp != lp){
+				alert("两次密码需要一致！");
+				return true;
+			}else{
+				return false;
+			}
+		}
+		
+		function submit(){
+			alert("二逼，骗你的;后台还没写，当然不能买东西了！");
+		}
+    </script>
 </body>
 </html>
